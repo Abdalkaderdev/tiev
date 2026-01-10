@@ -4,6 +4,7 @@ import { Heart, Sparkles, BookOpen, Users, Calendar, Shield, Globe, Flame, Arrow
 import { ChristianCross } from '@/components/icons/ChristianCross';
 import SpotlightCard from '@/components/SpotlightCard';
 import ShinyButton from '@/components/ShinyButton';
+import CountUp from '@/components/CountUp';
 import Link from 'next/link';
 
 const tievValues = [
@@ -30,24 +31,28 @@ const tievProjects = [
     focus: 'Discipleship & Church Strengthening',
     description: 'Raising a new generation of leaders through house churches and training future laborers to impact their communities.',
     link: '/projects/philippines',
+    image: 'https://tiev.global/wp-content/uploads/2025/12/IMG_3335-1.jpg',
   },
   {
     country: 'Pakistan',
     focus: 'Brick-Kiln Outreach',
     description: 'Serving alongside local leaders to disciple believers and provide aid to families trapped in brick-kiln labor.',
     link: '/projects/pakistan',
+    image: 'https://tiev.global/wp-content/uploads/2025/10/WhatsApp-Image-2025-09-15-at-06.20.49-768x1024.jpeg',
   },
   {
     country: 'Iraq',
     focus: 'Prayer & Church Planting',
     description: 'Establishing houses of prayer and church plants in Erbil, Baghdad, and Mosul through intercession and mercy.',
     link: '/projects/iraq',
+    image: 'https://tiev.global/wp-content/uploads/2025/11/Iraq_WordPress_Style_Layout-derek-teaching-768x1024.jpg',
   },
   {
     country: 'Middle East',
     focus: 'Missionary Discipleship',
     description: 'Equipping individuals for missionary service through immersive discipleship and hands-on ministry in the region.',
     link: '/projects/middle-east',
+    image: 'https://tiev.global/wp-content/uploads/2025/10/Group-768x1024.jpg',
   },
 ];
 
@@ -87,7 +92,7 @@ export default function Home() {
               <span className="text-xs font-mono tracking-[0.2em] text-white/40 uppercase">Global Missions</span>
             </div>
 
-            <h1 className="text-5xl lg:text-7xl leading-[1.1] text-brand-teal text-glow-teal tracking-tight font-semibold mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-7xl leading-[1.1] text-brand-teal text-glow-teal tracking-tight font-semibold mb-6">
               TREASURES IN<br />
               <span className="text-white opacity-90">EARTHEN VESSELS</span>
             </h1>
@@ -169,29 +174,29 @@ export default function Home() {
             {/* Orbiting Icons Container */}
             <div className="absolute w-[280px] h-[280px] lg:w-[320px] lg:h-[320px] animate-spin-slow">
               {/* Prayer Icon - Top */}
-              <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
+              <Link href="/contact" className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
                 <div className="w-12 h-12 rounded-full bg-[#0a0a08] border border-brand-teal/30 flex items-center justify-center shadow-[0_0_20px_rgba(0,131,130,0.2)] hover:border-brand-teal/60 hover:shadow-[0_0_30px_rgba(0,131,130,0.3)] transition-all cursor-pointer group">
                   <Heart className="w-5 h-5 text-brand-teal/70 group-hover:text-brand-teal transition-colors" />
                 </div>
-              </div>
+              </Link>
               {/* Bible Icon - Right */}
-              <div className="absolute top-1/2 right-0 translate-x-1/2 -translate-y-1/2">
+              <Link href="/about" className="absolute top-1/2 right-0 translate-x-1/2 -translate-y-1/2 z-20">
                 <div className="w-12 h-12 rounded-full bg-[#0a0a08] border border-brand-teal/30 flex items-center justify-center shadow-[0_0_20px_rgba(0,131,130,0.2)] hover:border-brand-teal/60 hover:shadow-[0_0_30px_rgba(0,131,130,0.3)] transition-all cursor-pointer group">
                   <BookOpen className="w-5 h-5 text-brand-teal/70 group-hover:text-brand-teal transition-colors" />
                 </div>
-              </div>
+              </Link>
               {/* Community Icon - Bottom */}
-              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2">
+              <Link href="/projects" className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 z-20">
                 <div className="w-12 h-12 rounded-full bg-[#0a0a08] border border-brand-teal/30 flex items-center justify-center shadow-[0_0_20px_rgba(0,131,130,0.2)] hover:border-brand-teal/60 hover:shadow-[0_0_30px_rgba(0,131,130,0.3)] transition-all cursor-pointer group">
                   <Users className="w-5 h-5 text-brand-teal/70 group-hover:text-brand-teal transition-colors" />
                 </div>
-              </div>
-              {/* Cross Icon - Left (Replaces Calendar) */}
-              <div className="absolute top-1/2 left-0 -translate-x-1/2 -translate-y-1/2">
+              </Link>
+              {/* Cross Icon - Left */}
+              <Link href="/about" className="absolute top-1/2 left-0 -translate-x-1/2 -translate-y-1/2 z-20">
                 <div className="w-12 h-12 rounded-full bg-[#0a0a08] border border-brand-teal/50 flex items-center justify-center shadow-[0_0_25px_rgba(0,131,130,0.4)] hover:border-brand-teal/80 hover:shadow-[0_0_40px_rgba(0,131,130,0.5)] transition-all cursor-pointer group animate-pulse-slow">
                   <ChristianCross className="w-6 h-6 text-brand-teal group-hover:text-brand-teal transition-colors" />
                 </div>
-              </div>
+              </Link>
             </div>
 
             {/* Inner Orbit with smaller icons */}
@@ -260,6 +265,28 @@ export default function Home() {
         </div>
       </section>
 
+      {/* GLOBAL IMPACT Video Section (New) */}
+      <section className="py-24 border-t border-white/5 bg-[#0a0a0a]">
+        <div className="max-w-6xl mx-auto px-6 text-center">
+          <span className="text-brand-teal text-sm font-mono tracking-wider uppercase mb-4 block">Global Impact</span>
+          <h2 className="text-3xl lg:text-5xl font-semibold text-white mb-8">
+            Watch how God is working through TIEV to transform lives across the earth.
+          </h2>
+          <div className="relative aspect-video w-full rounded-2xl overflow-hidden border border-white/10 shadow-[0_0_50px_rgba(0,131,130,0.1)] group">
+            <iframe
+              width="100%"
+              height="100%"
+              src="https://www.youtube.com/embed/u9DHVMvMTt8?rel=0"
+              title="TIEV Global Impact"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="absolute inset-0 w-full h-full"
+            />
+          </div>
+        </div>
+      </section>
+
       {/* Mission Statement Section */}
       <section className="relative py-24 overflow-hidden border-t border-white/5">
         <div className="max-w-7xl mx-auto px-6">
@@ -293,11 +320,59 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Where We Work Section */}
-      <section className="relative py-24 overflow-hidden bg-black/50 border-t border-white/5">
+      {/* Our Journey in Pictures (New Gallery) */}
+      <section className="py-24 border-t border-white/5 bg-[#080808]">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
-            <span className="text-amber-500 text-sm font-mono tracking-wider uppercase mb-4 block">Our Global Presence</span>
+            <h2 className="text-3xl lg:text-5xl font-semibold text-white mb-6">
+              Our Journey in Pictures
+            </h2>
+            <p className="text-xl text-white/70">
+              Moments captured from our ministry work across the Middle East
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 auto-rows-[300px]">
+            {/* Large Item */}
+            <div className="lg:col-span-2 lg:row-span-2 relative rounded-2xl overflow-hidden group">
+              <img src="https://tiev.global/wp-content/uploads/2025/11/Iraq_WordPress_Style_Layout-derek-teaching-768x1024.jpg" alt="Teaching Ministry" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent p-6 flex flex-col justify-end">
+                <h3 className="text-white text-xl font-medium">Teaching & Discipleship</h3>
+              </div>
+            </div>
+
+            {/* Regular Items */}
+            <div className="relative rounded-2xl overflow-hidden group">
+              <img src="https://tiev.global/wp-content/uploads/2025/12/IMG_3335-1.jpg" alt="Ministry Moment" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+            </div>
+            <div className="relative rounded-2xl overflow-hidden group">
+              <img src="https://tiev.global/wp-content/uploads/2025/12/IMG_7413-scaled.jpg" alt="Field Work" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+            </div>
+
+            {/* Tall Item */}
+            <div className="lg:row-span-2 relative rounded-2xl overflow-hidden group">
+              <img src="https://tiev.global/wp-content/uploads/2025/10/Group-768x1024.jpg" alt="Community Gathering" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent p-6 flex flex-col justify-end">
+                <h3 className="text-white text-xl font-medium">Community Gatherings</h3>
+              </div>
+            </div>
+
+            {/* More Regular Items */}
+            <div className="relative rounded-2xl overflow-hidden group">
+              <img src="https://tiev.global/wp-content/uploads/2025/10/WhatsApp-Image-2025-09-15-at-06.15.09-768x1024.jpeg" alt="Field Ministry" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+            </div>
+            <div className="relative rounded-2xl overflow-hidden group">
+              <img src="https://tiev.global/wp-content/uploads/2025/10/WhatsApp-Image-2025-09-15-at-06.20.49-768x1024.jpeg" alt="Outreach" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+            </div>
+          </div>
+        </div>
+      </section >
+
+      {/* Where We Work Section */}
+      < section className="relative py-24 overflow-hidden bg-black/50 border-t border-white/5" >
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <span className="text-brand-teal text-sm font-mono tracking-wider uppercase mb-4 block">Our Global Presence</span>
             <h2 className="text-3xl lg:text-5xl font-semibold text-white mb-6">
               Where We Work
             </h2>
@@ -309,28 +384,40 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {tievProjects.map((project, index) => (
               <Link href={project.link} key={index}>
-                <SpotlightCard className="p-8 h-full group cursor-pointer">
-                  <div className="flex flex-col h-full">
-                    <span className="text-brand-bronze text-sm font-mono tracking-wider uppercase mb-2">{project.focus}</span>
-                    <h3 className="text-2xl font-semibold text-white mb-3 group-hover:text-brand-bronze transition-colors">{project.country}</h3>
-                    <p className="text-white/60 leading-relaxed flex-grow">{project.description}</p>
-                    <div className="flex items-center gap-2 mt-4 text-brand-bronze text-sm font-medium">
-                      Learn More <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                <div className="group relative h-[400px] overflow-hidden rounded-2xl border border-white/10 bg-[#0a0a0a] cursor-pointer">
+                  {/* Background Image with Overlay */}
+                  <div className="absolute inset-0">
+                    <img src={project.image} alt={project.country} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-60 group-hover:opacity-40" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/80 to-transparent" />
+                  </div>
+
+                  {/* Content */}
+                  <div className="relative h-full flex flex-col justify-end p-8">
+                    <span className="text-brand-teal text-xs font-mono tracking-wider uppercase mb-2 inline-flex items-center gap-2">
+                      <div className="w-1.5 h-1.5 rounded-full bg-brand-teal animate-pulse" />
+                      {project.focus}
+                    </span>
+                    <h3 className="text-3xl font-semibold text-white mb-3 group-hover:text-brand-teal transition-colors duration-300 transform translate-y-2 group-hover:translate-y-0">{project.country}</h3>
+                    <p className="text-white/70 leading-relaxed mb-6 opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-4 group-hover:translate-y-0 text-sm">{project.description}</p>
+
+                    <div className="flex items-center gap-2 text-white text-sm font-medium opacity-50 group-hover:opacity-100 transition-opacity">
+                      <span>Explore Project</span>
+                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                     </div>
                   </div>
-                </SpotlightCard>
+                </div>
               </Link>
             ))}
           </div>
         </div>
-      </section>
+      </section >
 
-      {/* Donation CTA Section */}
-      <section className="relative py-32 overflow-hidden border-t border-white/5">
+      {/* Get Involved CTA Section */}
+      < section className="relative py-32 overflow-hidden border-t border-white/5" >
         {/* Background glow */}
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="w-[600px] h-[600px] bg-amber-500/10 rounded-full blur-[150px]" />
-        </div>
+        < div className="absolute inset-0 flex items-center justify-center" >
+          <div className="w-[600px] h-[600px] bg-brand-teal/10 rounded-full blur-[150px]" />
+        </div >
 
         <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
           <div className="inline-flex items-center gap-2 bg-brand-teal/10 border border-brand-teal/20 rounded-full px-4 py-2 mb-8">
@@ -339,11 +426,10 @@ export default function Home() {
           </div>
 
           <h2 className="text-3xl lg:text-5xl font-semibold text-white mb-6">
-            Join the Mission
+            Get Involved
           </h2>
           <p className="text-xl text-white/70 mb-10 max-w-2xl mx-auto leading-relaxed">
-            Your generosity enables us to reach more communities, train more leaders,
-            and share hope with those who need it most. Every gift makes an eternal difference.
+            Join us in bringing hope and transformation to the Middle East & Asia. There are many ways you can partner with us in this vital work.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -364,7 +450,7 @@ export default function Home() {
             </Link>
           </div>
         </div>
-      </section>
+      </section >
     </>
   );
 }

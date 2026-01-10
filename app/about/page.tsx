@@ -114,22 +114,22 @@ export default function AboutPage() {
                     <Globe className="w-16 h-16 text-brand-teal" />
                   </div>
 
-                  {/* Orbiting icons */}
-                  <div className="absolute -top-8 left-1/2 -translate-x-1/2">
+                  {/* Orbiting icons - Linked */}
+                  <Link href="/donate" className="absolute -top-8 left-1/2 -translate-x-1/2 hover:scale-110 transition-transform cursor-pointer z-20">
                     <div className="w-10 h-10 rounded-full bg-brand-teal/20 border border-brand-teal/30 flex items-center justify-center animate-float">
                       <Heart className="w-5 h-5 text-brand-teal" />
                     </div>
-                  </div>
-                  <div className="absolute bottom-4 -right-12">
+                  </Link>
+                  <Link href="/projects" className="absolute bottom-4 -right-12 hover:scale-110 transition-transform cursor-pointer z-20">
                     <div className="w-10 h-10 rounded-full bg-emerald-500/20 border border-emerald-500/30 flex items-center justify-center animate-float" style={{ animationDelay: '0.6s' }}>
                       <Users className="w-5 h-5 text-emerald-400" />
                     </div>
-                  </div>
-                  <div className="absolute bottom-4 -left-12">
+                  </Link>
+                  <Link href="/contact" className="absolute bottom-4 -left-12 hover:scale-110 transition-transform cursor-pointer z-20">
                     <div className="w-10 h-10 rounded-full bg-teal-500/20 border border-teal-500/30 flex items-center justify-center animate-float" style={{ animationDelay: '1.2s' }}>
                       <HandHeart className="w-5 h-5 text-teal-400" />
                     </div>
-                  </div>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -203,6 +203,43 @@ export default function AboutPage() {
                 <h3 className="text-lg font-semibold text-white mb-3">{value.title}</h3>
                 <p className="text-neutral-400 text-sm leading-relaxed">{value.description}</p>
               </SpotlightCard>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Statement of Faith Section (New Phase 12) */}
+      <section className="py-24 border-t border-white/5 bg-[#0a0a0a]">
+        <div className="max-w-3xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-6 text-white">
+              What We Believe
+            </h2>
+            <p className="text-xl text-neutral-400 max-w-2xl mx-auto">
+              Our foundation is built on the unshakeable truth of Scripture.
+            </p>
+          </div>
+
+          <div className="space-y-4">
+            {[
+              { title: 'The Bible', content: 'We believe the Bible is the inspired, only infallible, authoritative Word of God.' },
+              { title: 'The Trinity', content: 'We believe that there is one God, eternally existent in three persons: Father, Son, and Holy Spirit.' },
+              { title: 'Salvation', content: 'We believe specifically in the deity of our Lord Jesus Christ, in His virgin birth, in His sinless life, in His miracles, in His vicarious and atoning death through His shed blood, in His bodily resurrection, in His ascension to the right hand of the Father, and in His personal return in power and glory.' },
+              { title: 'The Great Commission', content: 'We believe in the present ministry of the Holy Spirit by whose indwelling the Christian is enabled to live a godly life and empower them for the mission of reaching the nations.' }
+            ].map((item, i) => (
+              <details key={i} className="group border border-white/10 rounded-xl bg-white/[0.02] overflow-hidden open:bg-white/[0.04] transition-all">
+                <summary className="flex items-center justify-between p-6 cursor-pointer list-none">
+                  <span className="text-lg font-medium text-white group-hover:text-brand-teal transition-colors">{item.title}</span>
+                  <span className="text-neutral-500 transition-transform group-open:rotate-180">
+                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </span>
+                </summary>
+                <div className="px-6 pb-6 text-neutral-400 leading-relaxed animate-fade-slide-in">
+                  {item.content}
+                </div>
+              </details>
             ))}
           </div>
         </div>

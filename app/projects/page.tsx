@@ -79,6 +79,48 @@ export default function ProjectsPage() {
                 </div>
             </section>
 
+            {/* "The Need" Bento Grid (New Phase 12) */}
+            <section className="py-24 border-y border-white/5 bg-[#0a0a0a]">
+                <div className="max-w-7xl mx-auto px-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 h-auto lg:h-[500px]">
+                        {/* Large Card: The 10/40 Window */}
+                        <SpotlightCard className="col-span-1 lg:col-span-2 row-span-2 p-10 flex flex-col justify-end relative overflow-hidden group" variant="matte">
+                            <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1547471080-752890c9471b?q=80&w=2000&auto=format&fit=crop')] bg-cover bg-center opacity-40 mix-blend-overlay transition-transform duration-700 group-hover:scale-110" />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
+                            <div className="relative z-10 w-full">
+                                <span className="inline-block px-3 py-1 bg-brand-teal/20 border border-brand-teal/30 rounded-full text-brand-teal text-xs font-mono mb-4 backdrop-blur-md">THE 10/40 WINDOW</span>
+                                <h3 className="text-3xl font-semibold text-white mb-2">The Unreached Billions</h3>
+                                <p className="text-white/70 max-w-lg text-lg">
+                                    97% of the unreached live in this window. It's home to the majority of the world's Muslims, Hindus, and Buddhists, yet receives the least amount of missionary focus.
+                                </p>
+                            </div>
+                        </SpotlightCard>
+
+                        {/* Top Right: Poverty */}
+                        <SpotlightCard className="p-8 flex flex-col justify-between" variant="matte">
+                            <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center mb-4">
+                                <Heart className="w-6 h-6 text-white/60" />
+                            </div>
+                            <div>
+                                <h3 className="text-xl font-semibold text-white mb-2">Extreme Poverty</h3>
+                                <p className="text-white/60 text-sm">Serving communities where basic needs like clean water, food, and education are daily struggles.</p>
+                            </div>
+                        </SpotlightCard>
+
+                        {/* Bottom Right: Persecution */}
+                        <SpotlightCard className="p-8 flex flex-col justify-between" variant="matte">
+                            <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center mb-4">
+                                <MapPin className="w-6 h-6 text-white/60" />
+                            </div>
+                            <div>
+                                <h3 className="text-xl font-semibold text-white mb-2">Persecution</h3>
+                                <p className="text-white/60 text-sm">Supporting believers who face immense pressure, discrimination, and danger for their faith.</p>
+                            </div>
+                        </SpotlightCard>
+                    </div>
+                </div>
+            </section>
+
             {/* CTA */}
             <section className="relative py-24 overflow-hidden">
                 <div className="absolute inset-0 flex items-center justify-center">
