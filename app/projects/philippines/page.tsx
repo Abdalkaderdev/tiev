@@ -48,109 +48,127 @@ export default function PhilippinesProjectPage() {
       {/* Image Gallery with Stories */}
       <section className="py-24 border-t border-white/5">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="space-y-16">
             {/* Paul Norris - Teaching */}
-            <div className="relative rounded-2xl overflow-hidden border border-white/10 group">
-              <div className="aspect-[4/3] relative">
-                <img
-                  src="https://tiev.global/wp-content/uploads/2025/12/IMG_3335-1.jpg"
-                  alt="Paul Norris Teaching"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent p-6 flex flex-col justify-end">
-                  <h3 className="text-white text-xl font-medium mb-2">Paul Norris — Teaching Under the Trees</h3>
-                  <p className="text-white/80 text-sm">
-                    Paul's heart for discipleship and encouragement has impacted many communities. Even under the trees, the Word is being sown. You can join us in raising up leaders who will carry the gospel to their own people.
-                  </p>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+              <div className="relative rounded-2xl overflow-hidden border border-white/10 group">
+                <div className="aspect-[4/3] relative">
+                  <img
+                    src="https://tiev.global/wp-content/uploads/2025/12/IMG_3335-1.jpg"
+                    alt="Paul Norris Teaching"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
                 </div>
+              </div>
+              <div>
+                <h3 className="text-3xl font-semibold text-white mb-4">Paul Norris — Teaching Under the Trees</h3>
+                <p className="text-neutral-400 text-lg leading-relaxed">
+                  Paul's heart for discipleship and encouragement has impacted many communities. Even under the trees, the Word is being sown. You can join us in raising up leaders who will carry the gospel to their own people.
+                </p>
               </div>
             </div>
 
             {/* Honoring Elders */}
-            <div className="relative rounded-2xl overflow-hidden border border-white/10 group">
-              <div className="aspect-[4/3] relative">
-                <img
-                  src="https://tiev.global/wp-content/uploads/2025/10/WhatsApp-Image-2025-09-15-at-06.15.09-768x1024.jpeg"
-                  alt="Church Elders"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent p-6 flex flex-col justify-end">
-                  <h3 className="text-white text-xl font-medium mb-2">Honoring the Elders of the Church</h3>
-                  <p className="text-white/80 text-sm">
-                    These elders carry wisdom, joy, and decades of faithfulness. Strengthening local churches is at the core of our mission. By partnering with us, you help uplift the spiritual mothers and fathers of this nation.
-                  </p>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+              <div className="relative rounded-2xl overflow-hidden border border-white/10 group lg:order-2">
+                <div className="aspect-[4/3] relative">
+                  <img
+                    src="https://tiev.global/wp-content/uploads/2025/10/WhatsApp-Image-2025-09-15-at-06.15.09-768x1024.jpeg"
+                    alt="Church Elders"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
                 </div>
+              </div>
+              <div className="lg:order-1">
+                <h3 className="text-3xl font-semibold text-white mb-4">Honoring the Elders of the Church</h3>
+                <p className="text-neutral-400 text-lg leading-relaxed">
+                  These elders carry wisdom, joy, and decades of faithfulness. Strengthening local churches is at the core of our mission. By partnering with us, you help uplift the spiritual mothers and fathers of this nation.
+                </p>
               </div>
             </div>
 
             {/* Household of Faith */}
-            <div className="relative rounded-2xl overflow-hidden border border-white/10 group">
-              <div className="aspect-[4/3] relative">
-                <img
-                  src="https://tiev.global/wp-content/uploads/2025/10/Group-768x1024.jpg"
-                  alt="Household of Faith"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent p-6 flex flex-col justify-end">
-                  <h3 className="text-white text-xl font-medium mb-2">A Household of Faith</h3>
-                  <p className="text-white/80 text-sm">
-                    God is moving in homes all across the Philippines. Families are being strengthened, faith is being shared, and hearts are opening. You can join us in helping households become centers of worship and discipleship.
-                  </p>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+              <div className="relative rounded-2xl overflow-hidden border border-white/10 group">
+                <div className="aspect-[4/3] relative">
+                  <img
+                    src="https://tiev.global/wp-content/uploads/2025/10/Group-768x1024.jpg"
+                    alt="Household of Faith"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
                 </div>
+              </div>
+              <div>
+                <h3 className="text-3xl font-semibold text-white mb-4">A Household of Faith</h3>
+                <p className="text-neutral-400 text-lg leading-relaxed">
+                  God is moving in homes all across the Philippines. Families are being strengthened, faith is being shared, and hearts are opening. You can join us in helping households become centers of worship and discipleship.
+                </p>
               </div>
             </div>
 
             {/* The Road Into the Harvest */}
-            <div className="relative rounded-2xl overflow-hidden border border-white/10 group">
-              <div className="aspect-[4/3] relative">
-                <img
-                  src="https://tiev.global/wp-content/uploads/2025/12/IMG_7413-scaled.jpg"
-                  alt="Mountain Road"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent p-6 flex flex-col justify-end">
-                  <h3 className="text-white text-xl font-medium mb-2">The Road Into the Harvest</h3>
-                  <p className="text-white/80 text-sm mb-2">
-                    God is opening doors in places once overlooked. Every curve of this mountain road reminds us that the gospel is advancing into hidden regions. We invite you to stand with us in prayer and partnership as we prepare the land for a discipleship base that will send workers into the harvest fields.
-                  </p>
-                  <cite className="text-brand-teal text-xs italic">"Prepare the way of the Lord…" — Isaiah 40:3</cite>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+              <div className="relative rounded-2xl overflow-hidden border border-white/10 group lg:order-2">
+                <div className="aspect-[4/3] relative">
+                  <img
+                    src="https://tiev.global/wp-content/uploads/2025/12/IMG_7413-scaled.jpg"
+                    alt="Mountain Road"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
                 </div>
+              </div>
+              <div className="lg:order-1">
+                <h3 className="text-3xl font-semibold text-white mb-4">The Road Into the Harvest</h3>
+                <p className="text-neutral-400 text-lg leading-relaxed mb-4">
+                  God is opening doors in places once overlooked. Every curve of this mountain road reminds us that the gospel is advancing into hidden regions. We invite you to stand with us in prayer and partnership as we prepare the land for a discipleship base that will send workers into the harvest fields.
+                </p>
+                <blockquote className="border-l-4 border-brand-teal pl-4 italic text-brand-teal">
+                  "Prepare the way of the Lord…" — Isaiah 40:3
+                </blockquote>
               </div>
             </div>
 
             {/* Treasured in His Eyes */}
-            <div className="relative rounded-2xl overflow-hidden border border-white/10 group">
-              <div className="aspect-[4/3] relative">
-                <img
-                  src="https://tiev.global/wp-content/uploads/2025/10/WhatsApp-Image-2025-09-15-at-06.20.49-768x1024.jpeg"
-                  alt="Children in Community"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent p-6 flex flex-col justify-end">
-                  <h3 className="text-white text-xl font-medium mb-2">Treasured in His Eyes</h3>
-                  <p className="text-white/80 text-sm mb-2">
-                    In simple neighborhoods like this one, we meet children who remind us of the treasure Jesus sees in every person. Your support helps us bring meals, discipleship, and hope to families in need.
-                  </p>
-                  <cite className="text-brand-teal text-xs italic">"God has chosen the poor… to be rich in faith." — James 2:5</cite>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+              <div className="relative rounded-2xl overflow-hidden border border-white/10 group">
+                <div className="aspect-[4/3] relative">
+                  <img
+                    src="https://tiev.global/wp-content/uploads/2025/10/WhatsApp-Image-2025-09-15-at-06.20.49-768x1024.jpeg"
+                    alt="Children in Community"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
                 </div>
+              </div>
+              <div>
+                <h3 className="text-3xl font-semibold text-white mb-4">Treasured in His Eyes</h3>
+                <p className="text-neutral-400 text-lg leading-relaxed mb-4">
+                  In simple neighborhoods like this one, we meet children who remind us of the treasure Jesus sees in every person. Your support helps us bring meals, discipleship, and hope to families in need.
+                </p>
+                <blockquote className="border-l-4 border-brand-teal pl-4 italic text-brand-teal">
+                  "God has chosen the poor… to be rich in faith." — James 2:5
+                </blockquote>
               </div>
             </div>
 
             {/* Land for Future Base */}
-            <div className="relative rounded-2xl overflow-hidden border border-white/10 group">
-              <div className="aspect-[4/3] relative">
-                <img
-                  src="https://tiev.global/wp-content/uploads/2025/10/WhatsApp-Image-2025-09-15-at-06.20.52-1-768x1024.jpeg"
-                  alt="Future Discipleship Base"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent p-6 flex flex-col justify-end">
-                  <h3 className="text-white text-xl font-medium mb-2">Land for the Future Discipleship Base</h3>
-                  <p className="text-white/80 text-sm mb-2">
-                    This open field will one day host worship, teaching, and missionary training. We invite you to be part of laying the foundations—spiritually and physically—for a place where lives will be transformed and leaders will be sent out.
-                  </p>
-                  <cite className="text-brand-teal text-xs italic">"Enlarge the place of your tent…" — Isaiah 54:2–3</cite>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+              <div className="relative rounded-2xl overflow-hidden border border-white/10 group lg:order-2">
+                <div className="aspect-[4/3] relative">
+                  <img
+                    src="https://tiev.global/wp-content/uploads/2025/10/WhatsApp-Image-2025-09-15-at-06.20.52-1-768x1024.jpeg"
+                    alt="Future Discipleship Base"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
                 </div>
+              </div>
+              <div className="lg:order-1">
+                <h3 className="text-3xl font-semibold text-white mb-4">Land for the Future Discipleship Base</h3>
+                <p className="text-neutral-400 text-lg leading-relaxed mb-4">
+                  This open field will one day host worship, teaching, and missionary training. We invite you to be part of laying the foundations—spiritually and physically—for a place where lives will be transformed and leaders will be sent out.
+                </p>
+                <blockquote className="border-l-4 border-brand-teal pl-4 italic text-brand-teal">
+                  "Enlarge the place of your tent…" — Isaiah 54:2–3
+                </blockquote>
               </div>
             </div>
           </div>

@@ -114,100 +114,136 @@ export default function PakistanProjectPage() {
       {/* Image Gallery with Scripture */}
       <section className="py-24 border-t border-white/5">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="space-y-16">
             {/* Feeding the Poor */}
-            <div className="relative rounded-2xl overflow-hidden border border-white/10 group">
-              <div className="aspect-[4/3] relative">
-                <img
-                  src="https://tiev.global/wp-content/uploads/2025/10/WhatsApp-Image-2025-09-15-at-06.20.49-768x1024.jpeg"
-                  alt="Feeding the Poor"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent p-6 flex flex-col justify-end">
-                  <h3 className="text-white text-xl font-medium mb-2">Feeding the Poor</h3>
-                  <p className="text-white/80 text-sm mb-2">Large pots of food prepared for the poor—an expression of Christ's compassion.</p>
-                  <cite className="text-brand-teal text-xs italic">"You gave me something to eat." — Matthew 25:35</cite>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+              <div className="relative rounded-2xl overflow-hidden border border-white/10 group">
+                <div className="aspect-[4/3] relative">
+                  <img
+                    src="https://tiev.global/wp-content/uploads/2025/10/WhatsApp-Image-2025-09-15-at-06.20.49-768x1024.jpeg"
+                    alt="Feeding the Poor"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
                 </div>
+              </div>
+              <div>
+                <h3 className="text-3xl font-semibold text-white mb-4">Feeding the Poor</h3>
+                <p className="text-neutral-400 text-lg leading-relaxed mb-4">
+                  Large pots of food prepared for the poor—an expression of Christ's compassion.
+                </p>
+                <blockquote className="border-l-4 border-brand-teal pl-4 italic text-brand-teal">
+                  "You gave me something to eat." — Matthew 25:35
+                </blockquote>
               </div>
             </div>
 
             {/* Strengthening Leaders */}
-            <div className="relative rounded-2xl overflow-hidden border border-white/10 group">
-              <div className="aspect-[4/3] relative">
-                <img
-                  src="https://tiev.global/wp-content/uploads/2025/12/IMG_7413-scaled.jpg"
-                  alt="Strengthening Leaders"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent p-6 flex flex-col justify-end">
-                  <h3 className="text-white text-xl font-medium mb-2">Strengthening Leaders</h3>
-                  <p className="text-white/80 text-sm mb-2">We invest deeply in local pastors so the gospel goes forth with authority.</p>
-                  <cite className="text-brand-teal text-xs italic">"Equip the saints…" — Ephesians 4:12</cite>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+              <div className="relative rounded-2xl overflow-hidden border border-white/10 group lg:order-2">
+                <div className="aspect-[4/3] relative">
+                  <img
+                    src="https://tiev.global/wp-content/uploads/2025/12/IMG_7413-scaled.jpg"
+                    alt="Strengthening Leaders"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
                 </div>
+              </div>
+              <div className="lg:order-1">
+                <h3 className="text-3xl font-semibold text-white mb-4">Strengthening Leaders</h3>
+                <p className="text-neutral-400 text-lg leading-relaxed mb-4">
+                  We invest deeply in local pastors so the gospel goes forth with authority.
+                </p>
+                <blockquote className="border-l-4 border-brand-teal pl-4 italic text-brand-teal">
+                  "Equip the saints…" — Ephesians 4:12
+                </blockquote>
               </div>
             </div>
 
             {/* Preparing Crusade Grounds */}
-            <div className="relative rounded-2xl overflow-hidden border border-white/10 group">
-              <div className="aspect-[4/3] relative">
-                <img
-                  src="https://tiev.global/wp-content/uploads/2025/10/Group-768x1024.jpg"
-                  alt="Preparing Crusade Grounds"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent p-6 flex flex-col justify-end">
-                  <h3 className="text-white text-xl font-medium mb-2">Preparing Crusade Grounds</h3>
-                  <p className="text-white/80 text-sm mb-2">Workers set up tents where thousands will hear the gospel.</p>
-                  <cite className="text-brand-teal text-xs italic">"How will they hear without a preacher?" — Romans 10:14</cite>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+              <div className="relative rounded-2xl overflow-hidden border border-white/10 group">
+                <div className="aspect-[4/3] relative">
+                  <img
+                    src="https://tiev.global/wp-content/uploads/2025/10/Group-768x1024.jpg"
+                    alt="Preparing Crusade Grounds"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
                 </div>
+              </div>
+              <div>
+                <h3 className="text-3xl font-semibold text-white mb-4">Preparing Crusade Grounds</h3>
+                <p className="text-neutral-400 text-lg leading-relaxed mb-4">
+                  Workers set up tents where thousands will hear the gospel.
+                </p>
+                <blockquote className="border-l-4 border-brand-teal pl-4 italic text-brand-teal">
+                  "How will they hear without a preacher?" — Romans 10:14
+                </blockquote>
               </div>
             </div>
 
             {/* Raising Disciples */}
-            <div className="relative rounded-2xl overflow-hidden border border-white/10 group">
-              <div className="aspect-[4/3] relative">
-                <img
-                  src="https://tiev.global/wp-content/uploads/2025/10/WhatsApp-Image-2025-09-15-at-06.15.09-768x1024.jpeg"
-                  alt="Raising Disciples"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent p-6 flex flex-col justify-end">
-                  <h3 className="text-white text-xl font-medium mb-2">Raising Disciples</h3>
-                  <p className="text-white/80 text-sm mb-2">Leaders and young believers gather to be strengthened and sent.</p>
-                  <cite className="text-brand-teal text-xs italic">"Go and make disciples…" — Matthew 28:19</cite>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+              <div className="relative rounded-2xl overflow-hidden border border-white/10 group lg:order-2">
+                <div className="aspect-[4/3] relative">
+                  <img
+                    src="https://tiev.global/wp-content/uploads/2025/10/WhatsApp-Image-2025-09-15-at-06.15.09-768x1024.jpeg"
+                    alt="Raising Disciples"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
                 </div>
+              </div>
+              <div className="lg:order-1">
+                <h3 className="text-3xl font-semibold text-white mb-4">Raising Disciples</h3>
+                <p className="text-neutral-400 text-lg leading-relaxed mb-4">
+                  Leaders and young believers gather to be strengthened and sent.
+                </p>
+                <blockquote className="border-l-4 border-brand-teal pl-4 italic text-brand-teal">
+                  "Go and make disciples…" — Matthew 28:19
+                </blockquote>
               </div>
             </div>
 
             {/* Set Free from Bonded Labor */}
-            <div className="relative rounded-2xl overflow-hidden border border-white/10 group">
-              <div className="aspect-[4/3] relative">
-                <img
-                  src="https://tiev.global/wp-content/uploads/2025/10/WhatsApp-Image-2025-09-15-at-06.20.52-1-768x1024.jpeg"
-                  alt="Set Free from Bonded Labor"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent p-6 flex flex-col justify-end">
-                  <h3 className="text-white text-xl font-medium mb-2">Set Free from Bonded Labor</h3>
-                  <p className="text-white/80 text-sm mb-2">Families thank God after being freed from brick slavery.</p>
-                  <cite className="text-brand-teal text-xs italic">"Proclaim liberty…" — Isaiah 61:1</cite>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+              <div className="relative rounded-2xl overflow-hidden border border-white/10 group">
+                <div className="aspect-[4/3] relative">
+                  <img
+                    src="https://tiev.global/wp-content/uploads/2025/10/WhatsApp-Image-2025-09-15-at-06.20.52-1-768x1024.jpeg"
+                    alt="Set Free from Bonded Labor"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
                 </div>
+              </div>
+              <div>
+                <h3 className="text-3xl font-semibold text-white mb-4">Set Free from Bonded Labor</h3>
+                <p className="text-neutral-400 text-lg leading-relaxed mb-4">
+                  Families thank God after being freed from brick slavery.
+                </p>
+                <blockquote className="border-l-4 border-brand-teal pl-4 italic text-brand-teal">
+                  "Proclaim liberty…" — Isaiah 61:1
+                </blockquote>
               </div>
             </div>
 
             {/* Families in Bondage */}
-            <div className="relative rounded-2xl overflow-hidden border border-white/10 group">
-              <div className="aspect-[4/3] relative">
-                <img
-                  src="https://tiev.global/wp-content/uploads/2025/12/IMG_3335-1.jpg"
-                  alt="Families in Bondage"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent p-6 flex flex-col justify-end">
-                  <h3 className="text-white text-xl font-medium mb-2">Families in Bondage</h3>
-                  <p className="text-white/80 text-sm mb-2">Jesus sees every family working in the brick kilns. Hope is rising.</p>
-                  <cite className="text-brand-teal text-xs italic">"He lifts the needy…" — Psalm 113:7</cite>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+              <div className="relative rounded-2xl overflow-hidden border border-white/10 group lg:order-2">
+                <div className="aspect-[4/3] relative">
+                  <img
+                    src="https://tiev.global/wp-content/uploads/2025/12/IMG_3335-1.jpg"
+                    alt="Families in Bondage"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
                 </div>
+              </div>
+              <div className="lg:order-1">
+                <h3 className="text-3xl font-semibold text-white mb-4">Families in Bondage</h3>
+                <p className="text-neutral-400 text-lg leading-relaxed mb-4">
+                  Jesus sees every family working in the brick kilns. Hope is rising.
+                </p>
+                <blockquote className="border-l-4 border-brand-teal pl-4 italic text-brand-teal">
+                  "He lifts the needy…" — Psalm 113:7
+                </blockquote>
               </div>
             </div>
           </div>
