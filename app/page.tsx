@@ -191,10 +191,10 @@ export default function Home() {
                   <Users className="w-5 h-5 text-brand-teal/70 group-hover:text-brand-teal transition-colors" />
                 </div>
               </Link>
-              {/* Cross Icon - Left */}
-              <Link href="/about" className="absolute top-1/2 left-0 -translate-x-1/2 -translate-y-1/2 z-20">
-                <div className="w-12 h-12 rounded-full bg-[#0a0a08] border border-brand-teal/50 flex items-center justify-center shadow-[0_0_25px_rgba(0,131,130,0.4)] hover:border-brand-teal/80 hover:shadow-[0_0_40px_rgba(0,131,130,0.5)] transition-all cursor-pointer group animate-pulse-slow">
-                  <ChristianCross className="w-6 h-6 text-brand-teal group-hover:text-brand-teal transition-colors" />
+              {/* Globe Icon - Left */}
+              <Link href="/projects" className="absolute top-1/2 left-0 -translate-x-1/2 -translate-y-1/2 z-20">
+                <div className="w-12 h-12 rounded-full bg-[#0a0a08] border border-brand-teal/30 flex items-center justify-center shadow-[0_0_20px_rgba(0,131,130,0.2)] hover:border-brand-teal/60 hover:shadow-[0_0_30px_rgba(0,131,130,0.3)] transition-all cursor-pointer group">
+                  <Globe className="w-5 h-5 text-brand-teal/70 group-hover:text-brand-teal transition-colors" />
                 </div>
               </Link>
             </div>
