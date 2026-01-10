@@ -13,14 +13,14 @@ export default function ShinyButton({ children, onClick, className = '' }: Shiny
     <button className={`shiny-cta group ${className}`} onClick={onClick}>
       {/* Rotating Border Beam */}
       <div className="absolute inset-0 -z-20 rounded-full overflow-hidden p-[1px]">
-        <div className="absolute inset-[-100%] bg-[conic-gradient(from_0deg,transparent_0_300deg,#f59e0b_360deg)] animate-border-spin" />
-        <div className="absolute inset-[1px] rounded-full bg-[#050402]" />
+        <div className="absolute inset-[-100%] bg-[conic-gradient(from_0deg,transparent_0_300deg,#008382_360deg)] animate-border-spin" />
+        <div className="absolute inset-[1px] rounded-full bg-[#232017]" />
       </div>
 
       {/* Inner Background & Effects */}
-      <div className="absolute inset-[2px] -z-10 overflow-hidden bg-[#0a0a08] rounded-full">
+      <div className="absolute inset-[2px] -z-10 overflow-hidden bg-[#232017] rounded-full">
         {/* Light Gradient Background */}
-        <div className="absolute inset-0 bg-gradient-to-b from-amber-900/20 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-b from-brand-teal/20 to-transparent" />
 
         {/* Animated Dots Pattern */}
         <div className="absolute inset-0 opacity-30 mix-blend-overlay animate-dots-move"
@@ -30,8 +30,8 @@ export default function ShinyButton({ children, onClick, className = '' }: Shiny
           }}
         />
 
-        {/* Amber Glow on Hover */}
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-2/3 h-1/2 bg-amber-500/10 blur-2xl rounded-full pointer-events-none transition-colors duration-500 group-hover:bg-amber-500/30" />
+        {/* Teal Glow on Hover */}
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-2/3 h-1/2 bg-brand-teal/10 blur-2xl rounded-full pointer-events-none transition-colors duration-500 group-hover:bg-brand-teal/30" />
       </div>
 
       {/* Content */}

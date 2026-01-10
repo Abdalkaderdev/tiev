@@ -12,8 +12,15 @@ module.exports = {
       },
       colors: {
         brand: {
-          amber: '#f59e0b',
-          dark: '#050402',
+          gold: '#CAB38A',
+          dark: '#232017',
+          teal: '#008382',
+          amber: '#CAB38A', // Mapping legacy amber to new gold for immediate consistency
+        },
+        tiev: {
+          gold: '#CAB38A',
+          dark: '#232017',
+          teal: '#008382',
         }
       },
       animation: {

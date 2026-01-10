@@ -7,9 +7,10 @@ interface SpotlightCardProps {
   className?: string;
   spotlightColor?: string;
   id?: string;
+  variant?: 'glass' | 'matte';
 }
 
-export default function SpotlightCard({ children, className = '', spotlightColor = 'amber', id }: SpotlightCardProps) {
+export default function SpotlightCard({ children, className = '', spotlightColor = 'emerald', id, variant = 'glass' }: SpotlightCardProps) {
   const cardRef = useRef<HTMLDivElement>(null);
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -34,25 +35,29 @@ export default function SpotlightCard({ children, className = '', spotlightColor
 
   // Color mapping for spotlight
   const colorMap: Record<string, string> = {
-    amber: 'rgba(251, 191, 36, 0.08)',
+    amber: 'rgba(0, 131, 130, 0.15)', // Remapped to Teal
     purple: 'rgba(168, 85, 247, 0.08)',
-    emerald: 'rgba(52, 211, 153, 0.08)',
+    emerald: 'rgba(0, 131, 130, 0.08)', // TIEV Teal equivalent
   };
 
   const borderColorMap: Record<string, string> = {
-    amber: 'rgba(251, 191, 36, 0.5)',
-    purple: 'rgba(168, 85, 247, 0.5)',
-    emerald: 'rgba(52, 211, 153, 0.5)',
+    amber: 'rgba(0, 131, 130, 0.3)', // Remapped to Teal
+    purple: 'rgba(168, 85, 247, 0.3)',
+    emerald: 'rgba(0, 131, 130, 0.3)', // TIEV Teal
   };
 
-  const glowColor = colorMap[spotlightColor] || colorMap.amber;
-  const borderColor = borderColorMap[spotlightColor] || borderColorMap.amber;
+  const glowColor = colorMap[spotlightColor] || colorMap.emerald;
+  const borderColor = borderColorMap[spotlightColor] || borderColorMap.emerald;
+
+  const baseStyles = variant === 'matte'
+    ? 'bg-zinc-900/40 border-white/5 backdrop-blur-md' // Nexus Cloud "Matte"
+    : 'glass-panel'; // Standard "Glass"
 
   return (
     <div
       ref={cardRef}
       id={id}
-      className={`spotlight-card group relative ${className}`}
+      className={`spotlight-card group relative ${baseStyles} ${className}`}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
     >

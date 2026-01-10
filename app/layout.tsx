@@ -3,13 +3,12 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import ChatWidget from '@/components/ChatWidget';
 
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Candles - SoapBox Super App | Spiritual Engagement Rewards',
-  description: 'Your spiritual engagement rewards and AI feature credits that power your faith journey on SoapBox.',
+  title: 'TIEV - Treasures in Earthen Vessels',
+  description: 'Reaching the unreached, caring for the poor, and discovering the treasure found in every Nation, Tribe and Tongue.',
 };
 
 export default function RootLayout({
@@ -25,7 +24,6 @@ export default function RootLayout({
         <Navbar />
         <main>{children}</main>
         <Footer />
-        <ChatWidget />
         {/* Background script for UnicornStudio.js */}
         <div className="aura-background-component top-0 w-full h-screen -z-10 fixed" data-alpha-mask="80" style={{ maskImage: 'linear-gradient(transparent, black 0%, black 80%, transparent)' }}>
           <div className="aura-background-component top-0 w-full -z-10 absolute h-full">

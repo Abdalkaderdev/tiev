@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { ChristianCross } from '@/components/icons/ChristianCross';
 import { Globe, Heart } from 'lucide-react';
 
 export default function Footer() {
@@ -9,10 +10,12 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 rounded-full bg-amber-900/30 flex items-center justify-center border border-amber-900/50">
-                <Globe className="w-4 h-4 text-amber-600" />
+              <div className="w-8 h-8 rounded-full bg-brand-teal/10 flex items-center justify-center border border-brand-teal/20">
+                <Globe className="w-4 h-4 text-brand-teal" />
               </div>
-              <span className="text-white font-medium">TIEV Global</span>
+              <span className="text-white font-medium flex items-center gap-2">
+                TIEV Global <ChristianCross className="w-3 h-3 text-brand-teal/50" />
+              </span>
             </div>
             <p className="text-neutral-500 text-sm mb-4">
               Reaching the unreached, caring for the poor, and discovering the treasure found in every Nation, Tribe and Tongue.
@@ -23,10 +26,10 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-medium mb-4">Our Work</h4>
             <ul className="space-y-2 text-sm text-neutral-500">
-              <li><Link href="/projects/iraq" className="hover:text-amber-500 transition-colors">Iraq</Link></li>
-              <li><Link href="/projects/pakistan" className="hover:text-amber-500 transition-colors">Pakistan</Link></li>
-              <li><Link href="/projects/philippines" className="hover:text-amber-500 transition-colors">Philippines</Link></li>
-              <li><Link href="/projects/japan" className="hover:text-amber-500 transition-colors">Japan</Link></li>
+              <li><Link href="/projects/iraq" className="hover:text-brand-teal transition-colors">Iraq</Link></li>
+              <li><Link href="/projects/pakistan" className="hover:text-brand-teal transition-colors">Pakistan</Link></li>
+              <li><Link href="/projects/philippines" className="hover:text-brand-teal transition-colors">Philippines</Link></li>
+              <li><Link href="/projects/middle-east" className="hover:text-brand-teal transition-colors">Middle East</Link></li>
             </ul>
           </div>
 
@@ -34,9 +37,9 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-medium mb-4">About</h4>
             <ul className="space-y-2 text-sm text-neutral-500">
-              <li><Link href="/about" className="hover:text-amber-500 transition-colors">Our Story</Link></li>
-              <li><Link href="/about#values" className="hover:text-amber-500 transition-colors">Our Values</Link></li>
-              <li><Link href="/contact" className="hover:text-amber-500 transition-colors">Contact Us</Link></li>
+              <li><Link href="/about" className="hover:text-brand-teal transition-colors">Our Story</Link></li>
+              <li><Link href="/about#values" className="hover:text-brand-teal transition-colors">Our Values</Link></li>
+              <li><Link href="/contact" className="hover:text-brand-teal transition-colors">Contact Us</Link></li>
             </ul>
           </div>
 
@@ -44,14 +47,14 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-medium mb-4">Get Involved</h4>
             <ul className="space-y-2 text-sm text-neutral-500">
-              <li><Link href="/donate" className="hover:text-amber-500 transition-colors flex items-center gap-1"><Heart className="w-3 h-3" /> Donate</Link></li>
-              <li><Link href="/contact" className="hover:text-amber-500 transition-colors">Partner With Us</Link></li>
+              <li><Link href="/donate" className="hover:text-brand-teal transition-colors flex items-center gap-1"><Heart className="w-3 h-3" /> Donate</Link></li>
+              <li><Link href="/contact" className="hover:text-brand-teal transition-colors">Partner With Us</Link></li>
             </ul>
 
             <h4 className="text-white font-medium mb-4 mt-8">Legal</h4>
             <ul className="space-y-2 text-sm text-neutral-500">
-              <li><Link href="/privacy" className="hover:text-amber-500 transition-colors">Privacy Policy</Link></li>
-              <li><Link href="/terms" className="hover:text-amber-500 transition-colors">Terms of Service</Link></li>
+              <li><Link href="/privacy" className="hover:text-brand-teal transition-colors">Privacy Policy</Link></li>
+              <li><Link href="/terms" className="hover:text-brand-teal transition-colors">Terms of Service</Link></li>
             </ul>
           </div>
         </div>
