@@ -10,9 +10,14 @@ export default function MiddleEastProject() {
         <>
             {/* Hero Section */}
             <section className="relative h-[70vh] flex items-center justify-center overflow-hidden">
-                <div className="absolute inset-0 bg-black/50 z-10" />
-                {/* Placeholder for Middle East landscape/ministry image */}
-                <div className="absolute inset-0 bg-stone-900" />
+                <div className="absolute inset-0 z-0">
+                    <img
+                        src="https://tiev.global/wp-content/uploads/2025/10/Group-768x1024.jpg"
+                        alt="Middle East Ministry"
+                        className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-black/50" />
+                </div>
 
                 <div className="relative z-20 text-center px-6 max-w-5xl mx-auto">
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-teal/20 border border-brand-teal/30 backdrop-blur-md mb-6">

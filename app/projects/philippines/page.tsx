@@ -83,6 +83,18 @@ export default function PhilippinesProjectPage() {
                 </SpotlightCard>
               ))}
             </div>
+
+            {/* Hero Image */}
+            <div className="mt-16 relative rounded-2xl overflow-hidden border border-white/10 shadow-[0_0_50px_rgba(0,131,130,0.1)] group max-w-4xl mx-auto">
+              <div className="aspect-[16/10] relative">
+                <img
+                  src="https://tiev.global/wp-content/uploads/2025/12/IMG_3335-1.jpg"
+                  alt="Local Pastor Ministry in Philippines"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+              </div>
+            </div>
           </div>
         </div>
       </section>
