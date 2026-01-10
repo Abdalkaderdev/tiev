@@ -5,6 +5,7 @@ import { ChristianCross } from '@/components/icons/ChristianCross';
 import SpotlightCard from '@/components/SpotlightCard';
 import ShinyButton from '@/components/ShinyButton';
 import CountUp from '@/components/CountUp';
+import AnimatedText from '@/components/AnimatedText';
 import Link from 'next/link';
 
 const tievValues = [
@@ -269,9 +270,10 @@ export default function Home() {
       <section className="py-24 border-t border-white/5 bg-[#0a0a0a]">
         <div className="max-w-6xl mx-auto px-6 text-center">
           <span className="text-brand-teal text-sm font-mono tracking-wider uppercase mb-4 block">Global Impact</span>
-          <h2 className="text-3xl lg:text-5xl font-semibold text-white mb-8">
-            Watch how God is working through TIEV to transform lives across the earth.
-          </h2>
+          <AnimatedText
+            text="Watch how God is working through TIEV to transform lives across the earth."
+            className="text-3xl lg:text-5xl font-semibold text-white mb-8"
+          />
           <div className="relative aspect-video w-full rounded-2xl overflow-hidden border border-white/10 shadow-[0_0_50px_rgba(0,131,130,0.1)] group">
             <iframe
               width="100%"
