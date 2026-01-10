@@ -6,6 +6,9 @@ import SpotlightCard from '@/components/SpotlightCard';
 import ShinyButton from '@/components/ShinyButton';
 import CountUp from '@/components/CountUp';
 import AnimatedText from '@/components/AnimatedText';
+import FloatingHearts from '@/components/FloatingHearts';
+import AnimatedSVGPath from '@/components/AnimatedSVGPath';
+import ParticleField from '@/components/ParticleField';
 import Link from 'next/link';
 
 const tievValues = [
@@ -415,27 +418,42 @@ export default function Home() {
         </div>
       </section >
 
-      {/* Get Involved CTA Section */}
-      < section className="relative py-32 overflow-hidden border-t border-white/5" >
+      {/* Get Involved Section - Enhanced with Animations */}
+      <section className="relative py-32 overflow-hidden">
+        {/* Animated SVG Paths */}
+        <AnimatedSVGPath />
+
+        {/* Floating Hearts */}
+        <FloatingHearts />
+
+        {/* Particle Field */}
+        <ParticleField />
+
         {/* Background glow */}
-        < div className="absolute inset-0 flex items-center justify-center" >
-          <div className="w-[600px] h-[600px] bg-brand-teal/10 rounded-full blur-[150px]" />
-        </div >
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="w-[600px] h-[600px] bg-brand-teal/10 rounded-full blur-[150px] animate-pulse-slow" />
+        </div>
 
         <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
-          <div className="inline-flex items-center gap-2 bg-brand-teal/10 border border-brand-teal/20 rounded-full px-4 py-2 mb-8">
-            <Heart className="w-4 h-4 text-brand-teal" />
+          <div className="inline-flex items-center gap-2 bg-brand-teal/10 border border-brand-teal/20 rounded-full px-4 py-2 mb-8 animate-fade-slide-in">
+            <Heart className="w-4 h-4 text-brand-teal animate-pulse" />
             <span className="text-brand-teal text-sm font-medium">Partner With Us</span>
           </div>
 
-          <h2 className="text-3xl lg:text-5xl font-semibold text-white mb-6">
-            Get Involved
-          </h2>
-          <p className="text-xl text-white/70 mb-10 max-w-2xl mx-auto leading-relaxed">
-            Join us in bringing hope and transformation to the Middle East & Asia. There are many ways you can partner with us in this vital work.
-          </p>
+          <AnimatedText
+            text="Get Involved"
+            className="text-4xl lg:text-6xl font-semibold text-white mb-6"
+            animationType="words"
+          />
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <AnimatedText
+            text="Join us in bringing hope and transformation to the Middle East & Asia. There are many ways you can partner with us in this vital work."
+            className="text-xl text-white/70 mb-10 max-w-2xl mx-auto leading-relaxed"
+            animationType="words"
+            delay={300}
+          />
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-slide-in stagger-2">
             <Link href="/donate">
               <ShinyButton>
                 <span className="flex items-center gap-2">
@@ -446,14 +464,14 @@ export default function Home() {
             </Link>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-white/20 text-white hover:bg-white/5 transition-colors font-medium"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-white/20 text-white hover:bg-white/5 hover:border-brand-teal/40 transition-all font-medium group"
             >
               Contact Us
-              <ArrowRight className="w-4 h-4" />
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
         </div>
-      </section >
+      </section>
     </>
   );
 }
