@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { Heart, ArrowRight } from 'lucide-react';
 import SpotlightCard from '@/components/SpotlightCard';
 import ShinyButton from '@/components/ShinyButton';
+import CountUp from '@/components/CountUp';
 
 const givingOptions = [
     {
@@ -92,15 +93,15 @@ export default function DonatePage() {
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         <div className="text-center">
-                            <div className="text-4xl font-bold text-brand-teal mb-2">4</div>
+                            <CountUp end={4} duration={2000} />
                             <div className="text-white/70">Countries Served</div>
                         </div>
                         <div className="text-center">
-                            <div className="text-4xl font-bold text-brand-teal mb-2">100+</div>
+                            <CountUp end={100} duration={2500} suffix="+" />
                             <div className="text-white/70">Leaders Trained</div>
                         </div>
                         <div className="text-center">
-                            <div className="text-4xl font-bold text-brand-teal mb-2">1000s</div>
+                            <CountUp end={1000} duration={3000} suffix="s" />
                             <div className="text-white/70">Lives Touched</div>
                         </div>
                     </div>

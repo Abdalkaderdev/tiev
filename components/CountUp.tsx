@@ -6,55 +6,69 @@ interface CountUpProps {
     end: number;
     duration?: number;
     suffix?: string;
-    prefix?: string;
-    className?: string;
 }
 
-export default function CountUp({ end, duration = 2000, suffix = '', prefix = '', className = '' }: CountUpProps) {
+export default function CountUp({ end, duration = 2000, suffix = '' }: CountUpProps) {
     const [count, setCount] = useState(0);
-    const elementRef = useRef<HTMLSpanElement>(null);
-    const observerRef = useRef<IntersectionObserver | null>(null);
-    const hasAnimated = useRef(false);
+    const [isVisible, setIsVisible] = useState(false);
+    const ref = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
-        observerRef.current = new IntersectionObserver(
-            (entries) => {
-                if (entries[0].isIntersecting && !hasAnimated.current) {
-                    hasAnimated.current = true;
-                    let startTime: number | null = null;
-                    const animate = (currentTime: number) => {
-                        if (!startTime) startTime = currentTime;
-                        const progress = Math.min((currentTime - startTime) / duration, 1);
-
-                        // Ease out quart
-                        const easeProgress = 1 - Math.pow(1 - progress, 4);
-
-                        setCount(Math.floor(easeProgress * end));
-
-                        if (progress < 1) {
-                            requestAnimationFrame(animate);
-                        } else {
-                            setCount(end);
-                        }
-                    };
-                    requestAnimationFrame(animate);
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting && !isVisible) {
+                    setIsVisible(true);
                 }
             },
             { threshold: 0.1 }
         );
 
-        if (elementRef.current) {
-            observerRef.current.observe(elementRef.current);
+        if (ref.current) {
+            observer.observe(ref.current);
         }
 
         return () => {
-            if (observerRef.current) observerRef.current.disconnect();
+            if (ref.current) {
+                observer.unobserve(ref.current);
+            }
         };
-    }, [end, duration]);
+    }, [isVisible]);
+
+    useEffect(() => {
+        if (!isVisible) return;
+
+        let startTime: number;
+        let animationFrame: number;
+
+        const animate = (currentTime: number) => {
+            if (!startTime) startTime = currentTime;
+            const progress = Math.min((currentTime - startTime) / duration, 1);
+
+            // Easing function for smooth animation
+            const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+            const currentCount = Math.floor(easeOutQuart * end);
+
+            setCount(currentCount);
+
+            if (progress < 1) {
+                animationFrame = requestAnimationFrame(animate);
+            } else {
+                setCount(end);
+            }
+        };
+
+        animationFrame = requestAnimationFrame(animate);
+
+        return () => {
+            if (animationFrame) {
+                cancelAnimationFrame(animationFrame);
+            }
+        };
+    }, [isVisible, end, duration]);
 
     return (
-        <span ref={elementRef} className={className}>
-            {prefix}{count}{suffix}
-        </span>
+        <div ref={ref} className="text-4xl font-bold text-brand-teal">
+            {count}{suffix}
+        </div>
     );
 }
