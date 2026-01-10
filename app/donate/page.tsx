@@ -54,18 +54,26 @@ export default function DonatePage() {
             {/* Giving Options */}
             <section className="relative py-24 overflow-hidden">
                 <div className="max-w-7xl mx-auto px-6">
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         {givingOptions.map((option, index) => (
-                            <SpotlightCard key={index} className="p-8">
-                                <div className="flex flex-col h-full text-center">
-                                    <h3 className="text-xl font-semibold text-white mb-3">{option.title}</h3>
-                                    <p className="text-white/60 leading-relaxed flex-grow mb-6">{option.description}</p>
+                            <SpotlightCard key={index} className="p-10 group hover:border-brand-teal/40 transition-all" spotlightColor="emerald">
+                                <div className="flex flex-col h-full">
+                                    {/* Icon */}
+                                    <div className="w-16 h-16 rounded-2xl bg-brand-teal/10 flex items-center justify-center mb-6 border border-brand-teal/20 group-hover:scale-110 group-hover:bg-brand-teal/20 transition-all">
+                                        <Heart className="w-8 h-8 text-brand-teal" />
+                                    </div>
+
+                                    {/* Content */}
+                                    <h3 className="text-2xl font-semibold text-white mb-4">{option.title}</h3>
+                                    <p className="text-neutral-400 leading-relaxed flex-grow mb-8 text-base">{option.description}</p>
+
+                                    {/* CTA Button */}
                                     <Link
                                         href={option.link}
-                                        className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-brand-teal/10 border border-brand-teal/30 text-brand-teal hover:bg-brand-teal/20 transition-colors font-medium"
+                                        className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-brand-teal/10 border border-brand-teal/30 text-brand-teal hover:bg-brand-teal hover:text-white hover:border-brand-teal transition-all font-medium group-hover:shadow-[0_0_30px_rgba(0,131,130,0.3)]"
                                     >
                                         {option.cta}
-                                        <ArrowRight className="w-4 h-4" />
+                                        <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                                     </Link>
                                 </div>
                             </SpotlightCard>
