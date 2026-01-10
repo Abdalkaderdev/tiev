@@ -85,34 +85,42 @@ export default function IraqProjectPage() {
       {/* Image Gallery */}
       <section className="py-24 border-t border-white/5">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
-            <div className="relative rounded-2xl overflow-hidden border border-white/10 group">
-              <div className="aspect-[4/3] relative">
-                <img
-                  src="https://tiev.global/wp-content/uploads/2025/11/Iraq_WordPress_Style_Layout-derek-teaching-768x1024.jpg"
-                  alt="Worship and Prayer Community"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent p-6 flex flex-col justify-end">
-                  <p className="text-white/90 text-sm mb-3">
-                    A growing community gathers weekly for worship, prayer, and discipleship — lifting up the name of Jesus in Northern Iraq.
-                  </p>
+          <div className="space-y-16">
+            {/* Worship and Prayer Community */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+              <div className="relative rounded-2xl overflow-hidden border border-white/10 group">
+                <div className="aspect-[4/3] relative">
+                  <img
+                    src="https://tiev.global/wp-content/uploads/2025/11/Iraq_WordPress_Style_Layout-derek-teaching-768x1024.jpg"
+                    alt="Worship and Prayer Community"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
                 </div>
+              </div>
+              <div>
+                <h3 className="text-3xl font-semibold text-white mb-4">Worship & Prayer Community</h3>
+                <p className="text-neutral-400 text-lg leading-relaxed">
+                  A growing community gathers weekly for worship, prayer, and discipleship — lifting up the name of Jesus in Northern Iraq.
+                </p>
               </div>
             </div>
 
-            <div className="relative rounded-2xl overflow-hidden border border-white/10 group">
-              <div className="aspect-[4/3] relative">
-                <img
-                  src="https://tiev.global/wp-content/uploads/2025/12/IMG_7413-scaled.jpg"
-                  alt="Ministry and Discipleship"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent p-6 flex flex-col justify-end">
-                  <p className="text-white/90 text-sm mb-3">
-                    Ministry here is relational. Shared meals, shared life, and shared faith — friendships are the bridge for discipleship and mission.
-                  </p>
+            {/* Ministry and Discipleship */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+              <div className="relative rounded-2xl overflow-hidden border border-white/10 group lg:order-2">
+                <div className="aspect-[4/3] relative">
+                  <img
+                    src="https://tiev.global/wp-content/uploads/2025/12/IMG_7413-scaled.jpg"
+                    alt="Ministry and Discipleship"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
                 </div>
+              </div>
+              <div className="lg:order-1">
+                <h3 className="text-3xl font-semibold text-white mb-4">Relational Ministry</h3>
+                <p className="text-neutral-400 text-lg leading-relaxed">
+                  Ministry here is relational. Shared meals, shared life, and shared faith — friendships are the bridge for discipleship and mission.
+                </p>
               </div>
             </div>
           </div>
