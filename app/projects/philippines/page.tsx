@@ -1,34 +1,8 @@
 'use client';
 
-import { HandHeart, BookOpen, Users, Building, ArrowRight, MapPin } from 'lucide-react';
-import SpotlightCard from '@/components/SpotlightCard';
+import { Heart, BookOpen, Users, Building, ArrowRight, MapPin, Home } from 'lucide-react';
 import ShinyButton from '@/components/ShinyButton';
 import Link from 'next/link';
-
-const initiatives = [
-  {
-    icon: BookOpen,
-    title: 'Pastor Training',
-    description: 'Equipping local pastors with theological education and leadership skills to effectively shepherd their congregations.',
-  },
-  {
-    icon: Building,
-    title: 'Church Planting',
-    description: 'Establishing new faith communities in rural and unreached areas to bring the hope of the Gospel.',
-  },
-  {
-    icon: Users,
-    title: 'Youth Discipleship',
-    description: 'Mentoring the next generation of leaders, fostering spiritual growth and community engagement.',
-  },
-];
-
-const stats = [
-  { value: '150+', label: 'Pastors Trained' },
-  { value: '20', label: 'New Churches' },
-  { value: '500+', label: 'Youth Discipled' },
-  { value: '3', label: 'Conferences' },
-];
 
 export default function PhilippinesProjectPage() {
   return (
@@ -43,88 +17,142 @@ export default function PhilippinesProjectPage() {
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-brand-teal/10 bg-brand-teal/5 mb-8 backdrop-blur-sm animate-fade-slide-in">
               <MapPin className="w-3 h-3 text-brand-teal" />
               <span className="text-[10px] uppercase tracking-widest font-medium text-teal-200/80">
-                Project Focus: Philippines
+                Philippines Initiative
               </span>
             </div>
 
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold tracking-tight leading-[1.1] mb-6 text-white animate-fade-slide-in stagger-1">
-              Empowering the Church,<br />
-              <span className="text-brand-teal text-glow-teal">Leadership Development</span>
+              Philippines Initiative
             </h1>
 
             <p className="text-xl text-neutral-400 animate-fade-slide-in stagger-2 leading-relaxed">
-              Strengthening local churches and equipping leaders to build vibrant, self-sustaining faith communities across the Philippines.
+              Stories, testimonies, and invitations to join what God is doing in the Philippines. Through serving the poor, strengthening churches, and building a discipleship base, we believe God is shaping a generation of laborers for His harvest.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Overview & Stats */}
-      <section className="py-24 border-t border-white/5 bg-[#080808]">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <h2 className="text-3xl font-semibold text-white mb-6">The Need & The Vision</h2>
-              <div className="prose prose-invert text-neutral-400 leading-relaxed">
-                <p className="mb-4">
-                  While the church in the Philippines is growing, many rural and urban poor communities lack trained leaders and resources. Pastors often serve with little to no formal theological training.
-                </p>
-                <p>
-                  TIEV comes alongside these local leaders to provide the training, encouragement, and resources they need. By strengthening the leadership, we strengthen the whole church, enabling them to reach their own communities more effectively.
-                </p>
-              </div>
-            </div>
-
-            <div className="grid grid-cols-2 gap-4">
-              {stats.map((stat, i) => (
-                <SpotlightCard key={i} className="p-6 text-center border border-white/10 bg-white/[0.02]" spotlightColor="emerald">
-                  <div className="text-3xl font-bold text-white mb-1">{stat.value}</div>
-                  <div className="text-sm text-brand-teal uppercase tracking-wider font-medium">{stat.label}</div>
-                </SpotlightCard>
-              ))}
-            </div>
-
-            {/* Hero Image */}
-            <div className="mt-16 relative rounded-2xl overflow-hidden border border-white/10 shadow-[0_0_50px_rgba(0,131,130,0.1)] group max-w-4xl mx-auto">
-              <div className="aspect-[16/10] relative">
-                <img
-                  src="https://tiev.global/wp-content/uploads/2025/12/IMG_3335-1.jpg"
-                  alt="Local Pastor Ministry in Philippines"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-              </div>
-            </div>
-          </div>
+      {/* Growing Church Family */}
+      <section className="py-16 border-t border-white/5 bg-[#080808]">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <h2 className="text-3xl font-semibold text-white mb-6">A Growing Church Family</h2>
+          <p className="text-xl text-neutral-400 leading-relaxed mb-6">
+            The church in the Philippines is alive and full of potential. Together, we can encourage pastors, equip believers, and reach communities with the gospel. Your partnership helps the Kingdom advance in powerful ways.
+          </p>
+          <blockquote className="text-2xl font-light text-brand-teal italic">
+            "Go and make disciples…" — Matthew 28:19–20
+          </blockquote>
         </div>
       </section>
 
-      {/* Key Initiatives */}
+      {/* Image Gallery with Stories */}
       <section className="py-24 border-t border-white/5">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-6 text-white">
-              Key Initiatives
-            </h2>
-            <p className="text-xl text-neutral-400 max-w-2xl mx-auto">
-              Strategic areas where we are investing to build a stronger future.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {initiatives.map((item, i) => (
-              <SpotlightCard
-                key={i}
-                className="p-8 rounded-3xl border border-white/10 bg-white/[0.02] group hover:border-brand-teal/30 transition-all"
-                spotlightColor="emerald"
-              >
-                <div className="w-14 h-14 rounded-2xl bg-brand-teal/10 flex items-center justify-center mb-6 border border-brand-teal/20 group-hover:scale-110 transition-transform">
-                  <item.icon className="w-7 h-7 text-brand-teal" />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Paul Norris - Teaching */}
+            <div className="relative rounded-2xl overflow-hidden border border-white/10 group">
+              <div className="aspect-[4/3] relative">
+                <img
+                  src="https://tiev.global/wp-content/uploads/2025/12/IMG_3335-1.jpg"
+                  alt="Paul Norris Teaching"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent p-6 flex flex-col justify-end">
+                  <h3 className="text-white text-xl font-medium mb-2">Paul Norris — Teaching Under the Trees</h3>
+                  <p className="text-white/80 text-sm">
+                    Paul's heart for discipleship and encouragement has impacted many communities. Even under the trees, the Word is being sown. You can join us in raising up leaders who will carry the gospel to their own people.
+                  </p>
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{item.title}</h3>
-                <p className="text-neutral-400 leading-relaxed">{item.description}</p>
-              </SpotlightCard>
-            ))}
+              </div>
+            </div>
+
+            {/* Honoring Elders */}
+            <div className="relative rounded-2xl overflow-hidden border border-white/10 group">
+              <div className="aspect-[4/3] relative">
+                <img
+                  src="https://tiev.global/wp-content/uploads/2025/10/WhatsApp-Image-2025-09-15-at-06.15.09-768x1024.jpeg"
+                  alt="Church Elders"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent p-6 flex flex-col justify-end">
+                  <h3 className="text-white text-xl font-medium mb-2">Honoring the Elders of the Church</h3>
+                  <p className="text-white/80 text-sm">
+                    These elders carry wisdom, joy, and decades of faithfulness. Strengthening local churches is at the core of our mission. By partnering with us, you help uplift the spiritual mothers and fathers of this nation.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Household of Faith */}
+            <div className="relative rounded-2xl overflow-hidden border border-white/10 group">
+              <div className="aspect-[4/3] relative">
+                <img
+                  src="https://tiev.global/wp-content/uploads/2025/10/Group-768x1024.jpg"
+                  alt="Household of Faith"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent p-6 flex flex-col justify-end">
+                  <h3 className="text-white text-xl font-medium mb-2">A Household of Faith</h3>
+                  <p className="text-white/80 text-sm">
+                    God is moving in homes all across the Philippines. Families are being strengthened, faith is being shared, and hearts are opening. You can join us in helping households become centers of worship and discipleship.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* The Road Into the Harvest */}
+            <div className="relative rounded-2xl overflow-hidden border border-white/10 group">
+              <div className="aspect-[4/3] relative">
+                <img
+                  src="https://tiev.global/wp-content/uploads/2025/12/IMG_7413-scaled.jpg"
+                  alt="Mountain Road"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent p-6 flex flex-col justify-end">
+                  <h3 className="text-white text-xl font-medium mb-2">The Road Into the Harvest</h3>
+                  <p className="text-white/80 text-sm mb-2">
+                    God is opening doors in places once overlooked. Every curve of this mountain road reminds us that the gospel is advancing into hidden regions. We invite you to stand with us in prayer and partnership as we prepare the land for a discipleship base that will send workers into the harvest fields.
+                  </p>
+                  <cite className="text-brand-teal text-xs italic">"Prepare the way of the Lord…" — Isaiah 40:3</cite>
+                </div>
+              </div>
+            </div>
+
+            {/* Treasured in His Eyes */}
+            <div className="relative rounded-2xl overflow-hidden border border-white/10 group">
+              <div className="aspect-[4/3] relative">
+                <img
+                  src="https://tiev.global/wp-content/uploads/2025/10/WhatsApp-Image-2025-09-15-at-06.20.49-768x1024.jpeg"
+                  alt="Children in Community"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent p-6 flex flex-col justify-end">
+                  <h3 className="text-white text-xl font-medium mb-2">Treasured in His Eyes</h3>
+                  <p className="text-white/80 text-sm mb-2">
+                    In simple neighborhoods like this one, we meet children who remind us of the treasure Jesus sees in every person. Your support helps us bring meals, discipleship, and hope to families in need.
+                  </p>
+                  <cite className="text-brand-teal text-xs italic">"God has chosen the poor… to be rich in faith." — James 2:5</cite>
+                </div>
+              </div>
+            </div>
+
+            {/* Land for Future Base */}
+            <div className="relative rounded-2xl overflow-hidden border border-white/10 group">
+              <div className="aspect-[4/3] relative">
+                <img
+                  src="https://tiev.global/wp-content/uploads/2025/10/WhatsApp-Image-2025-09-15-at-06.20.52-1-768x1024.jpeg"
+                  alt="Future Discipleship Base"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent p-6 flex flex-col justify-end">
+                  <h3 className="text-white text-xl font-medium mb-2">Land for the Future Discipleship Base</h3>
+                  <p className="text-white/80 text-sm mb-2">
+                    This open field will one day host worship, teaching, and missionary training. We invite you to be part of laying the foundations—spiritually and physically—for a place where lives will be transformed and leaders will be sent out.
+                  </p>
+                  <cite className="text-brand-teal text-xs italic">"Enlarge the place of your tent…" — Isaiah 54:2–3</cite>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -133,17 +161,17 @@ export default function PhilippinesProjectPage() {
       <section className="py-24 border-t border-white/5 bg-[#080808]">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-6 text-white">
-            Equip Leaders
+            Support the Work in Philippines
           </h2>
           <p className="text-neutral-400 mb-10 max-w-2xl mx-auto text-lg">
-            Your support provides training materials, conference fees, and resources for pastors and church planters.
+            Join us in raising up a generation of Filipino leaders and church planters who will transform their nation.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link href="/donate">
               <ShinyButton>
                 <span className="flex items-center gap-2">
-                  <HandHeart className="w-5 h-5" />
-                  Support Leadership
+                  <Heart className="w-5 h-5" />
+                  Donate to the Philippines
                 </span>
               </ShinyButton>
             </Link>
