@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Flame, ArrowRight, Sparkles, Menu, X } from 'lucide-react';
+import { Globe, Heart, Menu, X } from 'lucide-react';
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -12,11 +12,10 @@ export default function Navbar() {
   const isActive = (path: string) => pathname === path;
 
   const navLinks = [
-    { href: '/features', label: 'Features' },
-    { href: '/pricing', label: 'Pricing' },
-    { href: '/candle', label: 'Candles', icon: Flame },
-    { href: '/ora', label: 'ORA™', icon: Sparkles, purple: true },
+    { href: '/', label: 'Home' },
     { href: '/about', label: 'About' },
+    { href: '/projects', label: 'Projects', icon: Globe },
+    { href: '/donate', label: 'Donate', icon: Heart, highlight: true },
     { href: '/contact', label: 'Contact' },
   ];
 
@@ -27,9 +26,9 @@ export default function Navbar() {
         {/* Logo Area */}
         <Link href="/" className="flex gap-2.5 items-center mr-4 md:mr-8">
           <div className="relative flex items-center justify-center w-6 h-6">
-            <Flame className="w-5 h-5 text-amber-500" />
+            <Globe className="w-5 h-5 text-amber-500" />
           </div>
-          <span className="font-medium text-sm tracking-tight text-white">SoapBox</span>
+          <span className="font-medium text-sm tracking-tight text-white">TIEV</span>
         </Link>
 
         {/* Links (Hidden on small screens) */}
@@ -40,8 +39,8 @@ export default function Navbar() {
               href={link.href}
               className={`text-xs font-medium transition-colors flex items-center gap-1 ${
                 isActive(link.href)
-                  ? (link.purple ? 'text-purple-400' : 'text-amber-400')
-                  : (link.purple ? 'text-white/50 hover:text-purple-300' : 'text-white/50 hover:text-white')
+                  ? (link.highlight ? 'text-amber-400' : 'text-amber-400')
+                  : (link.highlight ? 'text-amber-500/70 hover:text-amber-400' : 'text-white/50 hover:text-white')
               }`}
             >
               {link.icon && <link.icon className="w-3 h-3" />}
@@ -52,11 +51,11 @@ export default function Navbar() {
 
         {/* Action Button - Hidden on very small screens */}
         <Link
-          href="/get-started"
-          className="hidden sm:flex items-center gap-2 px-4 py-2 rounded-full bg-white text-black text-xs font-semibold hover:bg-amber-400 transition-colors group"
+          href="/donate"
+          className="hidden sm:flex items-center gap-2 px-4 py-2 rounded-full bg-amber-500 text-black text-xs font-semibold hover:bg-amber-400 transition-colors group"
         >
-          Get Started
-          <ArrowRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
+          Donate
+          <Heart className="w-3 h-3 group-hover:scale-110 transition-transform" />
         </Link>
 
         {/* Mobile Menu Button */}
@@ -91,8 +90,8 @@ export default function Navbar() {
               onClick={() => setMobileMenuOpen(false)}
               className={`flex items-center gap-3 px-4 py-3 rounded-xl transition-colors ${
                 isActive(link.href)
-                  ? (link.purple ? 'bg-purple-500/10 text-purple-400' : 'bg-amber-500/10 text-amber-400')
-                  : 'text-white/70 hover:bg-white/5 hover:text-white'
+                  ? (link.highlight ? 'bg-amber-500/10 text-amber-400' : 'bg-amber-500/10 text-amber-400')
+                  : (link.highlight ? 'text-amber-500/70 hover:bg-amber-500/5 hover:text-amber-400' : 'text-white/70 hover:bg-white/5 hover:text-white')
               }`}
             >
               {link.icon && <link.icon className="w-4 h-4" />}
@@ -104,12 +103,12 @@ export default function Navbar() {
         {/* Mobile CTA */}
         <div className="mt-4 pt-4 border-t border-white/10">
           <Link
-            href="/get-started"
+            href="/donate"
             onClick={() => setMobileMenuOpen(false)}
             className="flex items-center justify-center gap-2 w-full px-4 py-3 rounded-xl bg-amber-500 text-black font-semibold hover:bg-amber-400 transition-colors"
           >
-            Get Started Free
-            <ArrowRight className="w-4 h-4" />
+            Support Our Mission
+            <Heart className="w-4 h-4" />
           </Link>
         </div>
       </div>

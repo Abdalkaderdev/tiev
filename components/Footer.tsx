@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Flame } from 'lucide-react';
+import { Globe, Heart } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -10,53 +10,48 @@ export default function Footer() {
           <div>
             <div className="flex items-center gap-2 mb-4">
               <div className="w-8 h-8 rounded-full bg-amber-900/30 flex items-center justify-center border border-amber-900/50">
-                <Flame className="w-4 h-4 text-amber-600" />
+                <Globe className="w-4 h-4 text-amber-600" />
               </div>
-              <span className="text-white font-medium">SoapBox Super App</span>
+              <span className="text-white font-medium">TIEV Global</span>
             </div>
             <p className="text-neutral-500 text-sm mb-4">
-              Empowering faith communities worldwide with innovative technology that brings people together, deepens spiritual connections, and transforms lives.
+              Reaching the unreached, caring for the poor, and discovering the treasure found in every Nation, Tribe and Tongue.
             </p>
           </div>
 
-          {/* Features */}
+          {/* Our Work */}
           <div>
-            <h4 className="text-white font-medium mb-4">Features</h4>
+            <h4 className="text-white font-medium mb-4">Our Work</h4>
             <ul className="space-y-2 text-sm text-neutral-500">
-              <li><Link href="/features" className="hover:text-amber-500 transition-colors">Prayer Wall</Link></li>
-              <li><Link href="/features" className="hover:text-amber-500 transition-colors">Bible Reading</Link></li>
-              <li><Link href="/features" className="hover:text-amber-500 transition-colors">Events</Link></li>
-              <li><Link href="/features" className="hover:text-amber-500 transition-colors">Community Chat</Link></li>
-              <li><Link href="/features" className="hover:text-amber-500 transition-colors">Volunteer Hub</Link></li>
-              <li><Link href="/candle" className="hover:text-amber-500 transition-colors">SoapBox Candles</Link></li>
+              <li><Link href="/projects/iraq" className="hover:text-amber-500 transition-colors">Iraq</Link></li>
+              <li><Link href="/projects/pakistan" className="hover:text-amber-500 transition-colors">Pakistan</Link></li>
+              <li><Link href="/projects/philippines" className="hover:text-amber-500 transition-colors">Philippines</Link></li>
+              <li><Link href="/projects/japan" className="hover:text-amber-500 transition-colors">Japan</Link></li>
             </ul>
           </div>
 
-          {/* Company */}
+          {/* About */}
           <div>
-            <h4 className="text-white font-medium mb-4">Company</h4>
+            <h4 className="text-white font-medium mb-4">About</h4>
             <ul className="space-y-2 text-sm text-neutral-500">
-              <li><Link href="/about" className="hover:text-amber-500 transition-colors">About Us</Link></li>
-              <li><Link href="/contact" className="hover:text-amber-500 transition-colors">Contact</Link></li>
-              <li><Link href="/faq" className="hover:text-amber-500 transition-colors">FAQ</Link></li>
-              <li><Link href="/help" className="hover:text-amber-500 transition-colors">Help Center</Link></li>
-              <li><Link href="/support" className="hover:text-amber-500 transition-colors">Support</Link></li>
+              <li><Link href="/about" className="hover:text-amber-500 transition-colors">Our Story</Link></li>
+              <li><Link href="/about#values" className="hover:text-amber-500 transition-colors">Our Values</Link></li>
+              <li><Link href="/contact" className="hover:text-amber-500 transition-colors">Contact Us</Link></li>
             </ul>
           </div>
 
-          {/* Legal */}
+          {/* Get Involved */}
           <div>
-            <h4 className="text-white font-medium mb-4">Legal</h4>
+            <h4 className="text-white font-medium mb-4">Get Involved</h4>
+            <ul className="space-y-2 text-sm text-neutral-500">
+              <li><Link href="/donate" className="hover:text-amber-500 transition-colors flex items-center gap-1"><Heart className="w-3 h-3" /> Donate</Link></li>
+              <li><Link href="/contact" className="hover:text-amber-500 transition-colors">Partner With Us</Link></li>
+            </ul>
+
+            <h4 className="text-white font-medium mb-4 mt-8">Legal</h4>
             <ul className="space-y-2 text-sm text-neutral-500">
               <li><Link href="/privacy" className="hover:text-amber-500 transition-colors">Privacy Policy</Link></li>
               <li><Link href="/terms" className="hover:text-amber-500 transition-colors">Terms of Service</Link></li>
-            </ul>
-
-            <h4 className="text-white font-medium mb-4 mt-8">Get Started</h4>
-            <ul className="space-y-2 text-sm text-neutral-500">
-              <li><Link href="/get-started" className="hover:text-amber-500 transition-colors">Sign Up Free</Link></li>
-              <li><Link href="/signin" className="hover:text-amber-500 transition-colors">Sign In</Link></li>
-              <li><Link href="/pricing" className="hover:text-amber-500 transition-colors">View Pricing</Link></li>
             </ul>
           </div>
         </div>
@@ -64,10 +59,10 @@ export default function Footer() {
         <div className="border-t border-white/5 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-neutral-600 text-sm">
-              &copy; 2025 SoapBox Super App. All rights reserved.
+              &copy; {new Date().getFullYear()} TIEV Global. All rights reserved.
             </p>
             <p className="text-neutral-600 text-xs">
-              Built with faith and technology.
+              Treasures in Earthen Vessels
             </p>
           </div>
         </div>
