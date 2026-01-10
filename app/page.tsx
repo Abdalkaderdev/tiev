@@ -273,6 +273,7 @@ export default function Home() {
           <AnimatedText
             text="Watch how God is working through TIEV to transform lives across the earth."
             className="text-3xl lg:text-5xl font-semibold text-white mb-8"
+            animationType="words"
           />
           <div className="relative aspect-video w-full rounded-2xl overflow-hidden border border-white/10 shadow-[0_0_50px_rgba(0,131,130,0.1)] group">
             <iframe

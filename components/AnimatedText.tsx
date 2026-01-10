@@ -6,9 +6,15 @@ interface AnimatedTextProps {
     text: string;
     className?: string;
     delay?: number;
+    animationType?: 'letters' | 'words' | 'lines';
 }
 
-export default function AnimatedText({ text, className = '', delay = 0 }: AnimatedTextProps) {
+export default function AnimatedText({
+    text,
+    className = '',
+    delay = 0,
+    animationType = 'words'
+}: AnimatedTextProps) {
     const [isVisible, setIsVisible] = useState(false);
     const ref = useRef<HTMLDivElement>(null);
 
@@ -33,9 +39,30 @@ export default function AnimatedText({ text, className = '', delay = 0 }: Animat
         };
     }, [delay]);
 
-    // Split text into words and letters
-    const words = text.split(' ');
+    if (animationType === 'words') {
+        const words = text.split(' ');
+        return (
+            <div ref={ref} className={className}>
+                {words.map((word, index) => (
+                    <span
+                        key={index}
+                        className="inline-block mr-2"
+                        style={{
+                            opacity: isVisible ? 1 : 0,
+                            transform: isVisible ? 'translateY(0) rotateX(0deg)' : 'translateY(30px) rotateX(-90deg)',
+                            transition: `all 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) ${index * 0.08}s`,
+                            transformOrigin: 'bottom',
+                        }}
+                    >
+                        {word}
+                    </span>
+                ))}
+            </div>
+        );
+    }
 
+    // Letter animation (original)
+    const words = text.split(' ');
     return (
         <div ref={ref} className={className}>
             {words.map((word, wordIndex) => (
