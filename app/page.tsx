@@ -9,6 +9,7 @@ import AnimatedText from '@/components/AnimatedText';
 import FloatingHearts from '@/components/FloatingHearts';
 import AnimatedSVGPath from '@/components/AnimatedSVGPath';
 import ParticleField from '@/components/ParticleField';
+import ParallaxGrid from '@/components/ParallaxGrid';
 import Link from 'next/link';
 
 const tievValues = [
@@ -338,44 +339,13 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 auto-rows-[300px]">
-            {/* Large Item */}
-            <div className="lg:col-span-2 lg:row-span-2 relative rounded-2xl overflow-hidden group">
-              <img src="https://tiev.global/wp-content/uploads/2025/11/Iraq_WordPress_Style_Layout-derek-teaching-768x1024.jpg" alt="Teaching Ministry" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent p-6 flex flex-col justify-end">
-                <h3 className="text-white text-xl font-medium">Teaching & Discipleship</h3>
-              </div>
-            </div>
-
-            {/* Regular Items */}
-            <div className="relative rounded-2xl overflow-hidden group">
-              <img src="https://tiev.global/wp-content/uploads/2025/12/IMG_3335-1.jpg" alt="Ministry Moment" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-            </div>
-            <div className="relative rounded-2xl overflow-hidden group">
-              <img src="https://tiev.global/wp-content/uploads/2025/12/IMG_7413-scaled.jpg" alt="Field Work" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-            </div>
-
-            {/* Tall Item */}
-            <div className="lg:row-span-2 relative rounded-2xl overflow-hidden group">
-              <img src="https://tiev.global/wp-content/uploads/2025/10/Group-768x1024.jpg" alt="Community Gathering" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent p-6 flex flex-col justify-end">
-                <h3 className="text-white text-xl font-medium">Community Gatherings</h3>
-              </div>
-            </div>
-
-            {/* More Regular Items */}
-            <div className="relative rounded-2xl overflow-hidden group">
-              <img src="https://tiev.global/wp-content/uploads/2025/10/WhatsApp-Image-2025-09-15-at-06.15.09-768x1024.jpeg" alt="Field Ministry" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-            </div>
-            <div className="relative rounded-2xl overflow-hidden group">
-              <img src="https://tiev.global/wp-content/uploads/2025/10/WhatsApp-Image-2025-09-15-at-06.20.49-768x1024.jpeg" alt="Outreach" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-            </div>
-          </div>
+          {/* Parallax Grid Component */}
+          <ParallaxGrid />
         </div>
-      </section >
+      </section>
 
       {/* Where We Work Section */}
-      < section className="relative py-24 overflow-hidden bg-black/50 border-t border-white/5" >
+      <section className="relative py-24 overflow-hidden bg-black/50 border-t border-white/5">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <span className="text-brand-teal text-sm font-mono tracking-wider uppercase mb-4 block">Our Global Presence</span>
@@ -416,7 +386,7 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section >
+      </section>
 
       {/* Get Involved Section - Enhanced with Animations */}
       <section className="relative py-32 overflow-hidden">
