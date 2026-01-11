@@ -9,7 +9,7 @@ import AnimatedText from '@/components/AnimatedText';
 import FloatingHearts from '@/components/FloatingHearts';
 import AnimatedSVGPath from '@/components/AnimatedSVGPath';
 import ParticleField from '@/components/ParticleField';
-import ParallaxGrid from '@/components/ParallaxGrid';
+import StickyScrollGallery from '@/components/StickyScrollGallery';
 import Link from 'next/link';
 
 const tievValues = [
@@ -338,9 +338,10 @@ export default function Home() {
               Moments captured from our ministry work across the Middle East
             </p>
           </div>
-
-          {/* Parallax Grid Component */}
-          <ParallaxGrid />
+          {/* Sticky Scroll Gallery Component */}
+          <div className="mt-12 -mx-6 md:-mx-0">
+            <StickyScrollGallery />
+          </div>
         </div>
       </section>
 
